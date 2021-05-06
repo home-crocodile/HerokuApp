@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table {
+        font-family: Century Gothic;
+        border-collapse: separate;
+        table-layout: fixed;
+        width: 80%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th><h4>Расписание уроков</h4></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Черверг</th>
+        <th>Пятница</th>
+    </tr>
+    <tr>
+        <td>1. Русск. яз.</td>
+        <td>1. Бел. яз.</td>
+        <td>1. Русск. яз.</td>
+        <td>1. Бел. яз.</td>
+        <td>1. Русск. яз.</td>
+    </tr>
+    <tr>
+        <td>2. Математ.</td>
+        <td>2. Математ.</td>
+        <td>2. Математ.</td>
+        <td>2. Математ.</td>
+        <td>2. Математ.</td>
+    </tr>
+    <tr>
+        <td>3. Русск. лит.</td>
+        <td>3. Бел. лит.</td>
+        <td>3. Русск. лит.</td>
+        <td>3. Бел. лит.</td>
+        <td>3. Русск. лит.</td>
+    </tr>
+    <tr>
+        <td>4. Чел. и мир</td>
+        <td>4. Труд. обуч</td>
+        <td>4. Чел. и мир</td>
+        <td>4. Труд. обуч</td>
+        <td>4. Чел. и мир</td>
+    </tr>
+    <tr>
+        <td>5. Классн. час</td>
+        <td>5. Физ-ра</td>
+        <td></td>
+        <td>5. Классн. час</td>
+        <td></td>
+    </tr>
+</table>
+<h4 style="font-family:Century Gothic;">
+    <form>
+        <label for="firstName">Ваше имя:</label><br>
+        <input type="text" id="firstName" name="firstName"><br>
+        <label for="lastName">Ваша фамилия:</label><br>
+        <input type="text" id="lastName" name="lastName">
+        <p><label for="firstName">Ваши интересы:</label><br>
+            <input type="checkbox" id="interests1" name="interests1">
+            <label for="interests1"> математика</label><br>
+            <input type="checkbox" id="interests2" name="interests2">
+            <label for="interests2"> физкультура</label><br>
+            <input type="checkbox" id="interests3" name="interests3">
+            <label for="interests3"> рисование</label></p>
+        <p><label for="firstName">Есть ли у вас дома животные:</label><br>
+            <select>
+                <option>Да</option>
+                <option>Нет</option>
+            </select></p>
+        <p>
+            <button type="reset ">Все стереть!</button>
+        </p>
+    </form>
+    <img src="cat.jpg" alt="Котейка" width="300" height="300">
+    <p>
+        <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%88%D0%BA%D0%B0"><p>С точки зрения научной систематики, домашняя кошка — млекопитающее семейства кошачьих отряда хищных.</p>
+            <p>Ранее домашнюю кошку нередко рассматривали как отдельный биологический вид.</p>
+            <p>С точки зрения современной биологической систематики домашняя кошка (Felis silvestris catus)</p>
+            <p>является подвидом лесной кошки (Felis silvestris).</a></p></p>
+</h4>
+<p></p>
+<canvas id="myCanvas" width="950" height="0" style="border:2px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(950,0);
+    ctx.stroke();
+</script>
+</body>
+</html>
