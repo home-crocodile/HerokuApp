@@ -24,6 +24,7 @@ public class AddRemoveElements {
         }
         WebElement deleteElement = driver.findElement(By.xpath("//button[@onclick='deleteElement()']"));
         deleteElement.click();
-        //deleteElement.isDisplayed(); как проверить кол-во я не сообразила.
+        WebElement deleteElements = driver.findElements(By.xpath("//button[@OnClick='deleteElement()']"));
+        deleteElements.size()
     }
 }
