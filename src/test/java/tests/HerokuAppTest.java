@@ -21,15 +21,15 @@ public class HerokuAppTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("http://the-internet.herokuapp.com/inputs");
         WebElement inputFiled = driver.findElement(By.xpath("//*[@type='number']"));
+
         inputFiled.sendKeys("20");
         String actualText = inputFiled.getAttribute("value");
         Assert.assertEquals(actualText, "20");
         inputFiled.sendKeys(Keys.ARROW_UP);
         actualText = inputFiled.getAttribute("value");
-
         Assert.assertEquals(actualText, "21");
 
-        //driver.quit();
+        driver.quit();
 
     }
 }

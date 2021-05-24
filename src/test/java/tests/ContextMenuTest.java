@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -21,10 +22,10 @@ public class ContextMenuTest {
         driver.get("http://the-internet.herokuapp.com/context_menu");
         WebElement contextMenu = driver.findElement(By.xpath("//*[@id='hot-spot']"));
         actions.contextClick(contextMenu).perform();
+        WebElement alertMenu = driver.findElement(By.xpath("//*[@id='content']/script"));
+        Assert.assertEquals(alertMenu, "You selected a context menu");
         Alert alert = driver.switchTo().alert();
-        System.out.println("Alert Text: " + alert.getText());
         alert.accept();
-//Closing the driver instance
         driver.quit();
     }
 }
