@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class AddRemoveElements {
@@ -24,6 +25,10 @@ public class AddRemoveElements {
         }
         WebElement deleteElement = driver.findElement(By.xpath("//button[@onclick='deleteElement()']"));
         deleteElement.click();
-        //deleteElement.isDisplayed(); как проверить кол-во я не сообразила.
+
+        List<WebElement> deleteElementsList = driver.findElements(By.xpath("//button[@OnClick='deleteElement()']"));
+        int deleteElements = deleteElementsList.size();
+        Assert.assertEquals(deleteElements, 1);
+        driver.quit();
     }
 }
