@@ -29,7 +29,7 @@ public class HerokuAppTest {
 
         Assert.assertEquals(actualText, "21");
 
-        //driver.quit();
+        driver.quit();
 
     }
 }
